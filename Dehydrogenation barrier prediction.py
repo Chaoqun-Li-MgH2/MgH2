@@ -1,11 +1,16 @@
+# Author:Chaoqun Li
+# Contact us:lichaoqun5330@163.com
+# Tips:Calculation only applies to 110 section surface dehydrogenation of MgH2
 from ase.io import read
 from ase.neighborlist import NeighborList
 import numpy as np
 
 # Open POSCAR file
-atoms = read('POSCAR (7)')
+atoms = read('POSCAR (7)')  # Open POSCAR file
+# Select the number of H atoms participating in the reaction
 atom_index_H1 = 26
 atom_index_H2 = 38
+
 # Obtain the positions of all atoms
 positions = atoms.get_positions()
 # Obtain lattice parameters
